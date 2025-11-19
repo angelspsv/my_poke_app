@@ -1,0 +1,101 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFEB70; /* Amarillo suave */
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+#espai_visualitzacio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Botón random */
+#boto_poke_random button {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 15px 35px;
+    background-color: white;
+    color: black;
+    border: 3px solid #000;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 25px;
+}
+
+/* Hover del botón */
+#boto_poke_random button:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+#boto_poke_random button:active {
+    transform: scale(0.95);
+}
+
+/* Contenedor del Pokémon */
+#espai_poke_dades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Texto de datos */
+#espai_poke_dades h3,
+#espai_poke_dades p {
+    margin: 8px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Imagen del Pokémon */
+#espai_poke_dades img {
+    width: 180px;   /* más grande */
+    height: 180px;
+    image-rendering: pixelated; /* estilo retro opcional */
+    margin: 10px 0;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+    #boto_poke_random button {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+
+    #espai_poke_dades img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    #boto_poke_random button {
+        font-size: 1.1rem;
+        padding: 10px 25px;
+    }
+
+    #espai_poke_dades img {
+        width: 140px;
+        height: 140px;
+    }
+
+    #espai_poke_dades h3,
+    #espai_poke_dades p {
+        font-size: 1.1rem;
+    }
+}
