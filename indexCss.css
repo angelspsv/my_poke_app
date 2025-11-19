@@ -1,0 +1,79 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFEB70; /* Amarillo suave estilo Pokémon */
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+#espai_benvinguda {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Texto de bienvenida */
+#text_inici p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Contenedor del botón */
+#per_boto_inici {
+    margin-top: 20px;
+}
+
+/* Botón normal, limpio */
+#per_boto_inici button {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 15px 35px;
+    background-color: white;
+    color: black;
+    border: 3px solid #000;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* Hover */
+#per_boto_inici button:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+/* Active */
+#per_boto_inici button:active {
+    transform: scale(0.95);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+    #text_inici p {
+        font-size: 1.4rem;
+    }
+    #per_boto_inici button {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    #text_inici p {
+        font-size: 1.2rem;
+    }
+    #per_boto_inici button {
+        font-size: 1.1rem;
+        padding: 10px 25px;
+    }
+}
