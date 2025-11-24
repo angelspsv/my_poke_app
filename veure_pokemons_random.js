@@ -1,6 +1,9 @@
 //aquí es veuran les dades del pokemon
 const espaiPokeDades = document.getElementById('espai_poke_dades');
 
+//contabilitzar les vegades que s'ha fet click al botó
+let contador = 0;
+
 
 //fem el botó per mostrar pokemons random
 const btnRandom = document.createElement('button');
@@ -68,4 +71,10 @@ async function mostrarPokemon(){
 
     //afegim el contenidor del pokemon a l'espai html creat per aquest
     espaiPokeDades.appendChild(divDadesPokemon);
+
+    //sumem +1 al contador
+    contador++;
+
+    //actualitzar el text del botó segons el valor del contador
+    btnRandom.textContent = (contador === 0) ? "Veure'n un" : "Veure'n un altre";
 }

@@ -2,25 +2,32 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #FFEB70; /* Amarillo suave */
+    background-color: #FFEB70;
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-/* Contenedor principal */
+/* Contenedor principal → ahora ocupa toda la pantalla */
 #espai_visualitzacio {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;      /* botón arriba, contenido debajo */
     align-items: center;
     width: 90%;
     max-width: 600px;
-    text-align: center;
+    height: 100vh;                    /* ← CLAVE */
+    padding-top: 60px;                /* espacio para centrar un poco */
+    box-sizing: border-box;
 }
 
-/* Botón random */
+/* Botón random (ya no se moverá) */
+#boto_poke_random {
+    margin-bottom: 40px;              /* separación estable */
+}
+
 #boto_poke_random button {
     font-size: 1.4rem;
     font-weight: bold;
@@ -31,7 +38,6 @@ body {
     border-radius: 12px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-    margin-bottom: 25px;
 }
 
 /* Hover del botón */
@@ -61,15 +67,14 @@ body {
 
 /* Imagen del Pokémon */
 #espai_poke_dades img {
-    width: 180px;   /* más grande */
+    width: 180px;
     height: 180px;
-    image-rendering: pixelated; /* estilo retro opcional */
+    image-rendering: pixelated;
     margin: 10px 0;
 }
 
 /* ---------------- RESPONSIVE ---------------- */
 
-/* Tablets */
 @media (max-width: 768px) {
     #boto_poke_random button {
         font-size: 1.2rem;
@@ -82,8 +87,11 @@ body {
     }
 }
 
-/* Móviles */
 @media (max-width: 480px) {
+    #espai_visualitzacio {
+        padding-top: 40px;
+    }
+
     #boto_poke_random button {
         font-size: 1.1rem;
         padding: 10px 25px;
