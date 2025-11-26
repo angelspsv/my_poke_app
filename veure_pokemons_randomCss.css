@@ -73,6 +73,23 @@ body {
     margin: 10px 0;
 }
 
+
+#espai_poke_dades div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    text-align: center;
+}
+
+/* Aplicamos estilo SOLO a los textos Pes y Alçada */
+#espai_poke_dades div p {
+    width: 140px;   
+    text-align: left;     
+    margin: 4px 0;
+}
+
+
+
 /* ---------------- RESPONSIVE ---------------- */
 
 @media (max-width: 768px) {
